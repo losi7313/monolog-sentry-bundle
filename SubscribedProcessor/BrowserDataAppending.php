@@ -9,6 +9,7 @@ use Dziki\MonologSentryBundle\UserAgent\UserAgent;
 use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\HttpKernel\Event\GetResponseEvent;
 use Symfony\Component\HttpKernel\KernelEvents;
+use Symfony\Component\HttpKernel\Event\RequestEvent
 
 class BrowserDataAppending implements EventSubscriberInterface
 {
@@ -44,7 +45,7 @@ class BrowserDataAppending implements EventSubscriberInterface
         return $record;
     }
 
-    public function onKernelRequest(GetResponseEvent $event): void
+    public function onKernelRequest(RequestEvent $event): void
     {
         /** @var string $userAgent */
         $userAgent = $event->getRequest()->headers->get('User-Agent', '', true);
