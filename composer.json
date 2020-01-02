@@ -23,7 +23,7 @@
     "psr/simple-cache-implementation": "^1.0",
     "symfony/dependency-injection": "^4.1|^5.0",
     "symfony/monolog-bundle": "^3.3",
-    "symfony/monolog-bridge": "^3.4|^4.1",
+    "symfony/monolog-bridge": "^4.1|^5.0",
     "sentry/sentry": "^1.9.1"
   },
   "conflict": {
